@@ -1,28 +1,51 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.search {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.foundCard {
+  margin-bottom: 20px;
+  width: 325px;
+}
+.theCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 150px;
+  transition: 500ms;
+}
+.deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+.theCard img {
+  margin-bottom: 5px;
+  width: 100%;
+}
+.theCard:hover {
+  width: 250px;
+}
+.theCard:hover button {
+  display: inline-block;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.theCard button {
+  display: none;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+#size {
+  font-size: 30px;
+  margin: 20px 20px;
 }
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#star {
+  background-color: GREY;
 }
