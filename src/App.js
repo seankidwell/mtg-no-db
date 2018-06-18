@@ -44,6 +44,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <span id="title">Magic the Gathering Deck Builder</span>
         <div className="cardGenerator">
         <Search getCard={this.getCard} />
           {this.state.card !== null ? (
@@ -51,7 +52,11 @@ class App extends Component {
               <img src={this.state.card} alt="card" className="foundCard" />
             </div>
           ) : null}
+          {this.state.card !== null ? (
+            <div>
           <AddButton addCard={this.addCard} />
+            </div>) : null
+          }
         </div>
         <span id="size">Deck Size: {this.state.deck.length}</span>
         <Deck deck={this.state.deck} favoriteCard={this.favoriteCard} deleteCard={this.deleteCard}/>
