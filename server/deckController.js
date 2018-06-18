@@ -14,7 +14,7 @@ module.exports = {
   },
   delete: (req, res) => {
     const {index} = req.query;
-    deck = [...deck.slice(0, index), ...deck.slice(index + 1, deck.length)];
+    deck.splice(index, 1);
     res.send(deck);
   }
 }

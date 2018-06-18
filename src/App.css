@@ -33,7 +33,7 @@
   width: 100%;
 }
 .theCard:hover {
-  width: 250px;
+  width: 290px;
 }
 .theCard:hover button {
   display: inline-block;
