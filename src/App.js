@@ -23,7 +23,9 @@ class App extends Component {
   getCard = (e, name) => {
     e.preventDefault();
     axios.get(this.baseUrl + encodeURIComponent(name)).then(res => {
-      this.setState({ card: res.data.cards[0].imageUrl });
+      if (res.data.cards[0] && res.data.cards[0].imageUrl) {
+        this.setState({ card: res.data.cards[0].imageUrl });
+      }
     });
   };
   addCard = () => {
