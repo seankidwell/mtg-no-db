@@ -16,5 +16,9 @@ module.exports = {
     const { index } = req.query;
     deck.splice(index, 1);
     res.send(deck);
+  },
+  clear: (req, res) => {
+    deck=[];
+    res.send(deck);
   }
 };

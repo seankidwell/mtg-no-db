@@ -11,6 +11,7 @@ app.get("/api/deck", deckController.get);
 app.post("/api/deck", deckController.create);
 app.put("/api/deck", deckController.favorite);
 app.delete("/api/deck", deckController.delete);
+app.delete("/api/deck/all", deckController.clear);
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);

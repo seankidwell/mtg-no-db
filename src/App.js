@@ -43,6 +43,11 @@ class App extends Component {
       this.setState({ deck: res.data });
     });
   };
+  clear = () => {
+    axios.delete("/api/deck/all").then(res => {
+      this.setState({deck: res.data});
+    });
+  };
   render() {
     return (
       <div className="App">
@@ -60,7 +65,7 @@ class App extends Component {
             </div>
           ) : null}
         </div>
-        <span id="size">Deck Size: {this.state.deck.length}</span>
+        <span id="size">Deck Size: {this.state.deck.length} <button onClick={this.clear}>CLEAR ALL</button></span>
         <Deck
           deck={this.state.deck}
           favoriteCard={this.favoriteCard}
